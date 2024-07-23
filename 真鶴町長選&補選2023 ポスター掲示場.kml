@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name><![CDATA[真鶴町長選&補選2023 ポスター掲示場]]></name>
+    <description>真鶴町選管が提供する紙地図をデータにして、「選挙ポスターOpenData化作戦」サイトで公開しました。https://yokosukaposter.info/</description>
+    <NetworkLink>
+      <name><![CDATA[真鶴町長選&補選2023 ポスター掲示場]]></name>
+      <Link>
+        <href><![CDATA[https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=1GPEHJ5ce-7FgpGV0oVpZ0KzZm84MTPI]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>

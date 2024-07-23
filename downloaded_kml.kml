@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name><![CDATA[真鶴町長選&補選2023 ポスター掲示場]]></name>
+    <description>真鶴町選管が提供する紙地図をデータにして、「選挙ポスターOpenData化作戦」サイトで公開しました。https://yokosukaposter.info/</description>
+    <Style id="icon-1574-558B2F-labelson">
+      <IconStyle>
+        <color>ff2f8b55</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1574-817717-labelson">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1574-880E4F-labelson">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1574-AFB42B-labelson">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1574-F9A825-labelson">
+      <IconStyle>
+        <color>ff25a8f9</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>真鶴町2023ポスター掲示場</name>
+      <Placemark>
+        <name>1.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１２６５<br>緯度: 35.1480804<br>経度: 139.1447908]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１２６５</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1480804</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1447908</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1447908,35.1480804,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１１１５－７<br>緯度: 35.150472<br>経度: 139.144951]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１１１５－７</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.150472</value>
+          </Data>
+          <Data name="経度">
+            <value>139.144951</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.144951,35.150472,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１９４７－２３<br>緯度: 35.152791<br>経度: 139.141248]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１９４７－２３</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.152791</value>
+          </Data>
+          <Data name="経度">
+            <value>139.141248</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.141248,35.152791,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴９２０ー１<br>緯度: 35.153288<br><br>経度: 139.139661]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴９２０ー１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.153288
+</value>
+          </Data>
+          <Data name="経度">
+            <value>139.139661</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.139661,35.153288,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１９４７－５<br>緯度: 35.1537446<br>経度: 139.1418584]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１９４７－５</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1537446</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1418584</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1418584,35.1537446,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>7.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴６６３－１<br>緯度: 35.1551308<br>経度: 139.141441]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴６６３－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1551308</value>
+          </Data>
+          <Data name="経度">
+            <value>139.141441</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.141441,35.1551308,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>8.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴５５６－１<br>緯度: 35.1562459<br>経度: 139.140572]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴５５６－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1562459</value>
+          </Data>
+          <Data name="経度">
+            <value>139.140572</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.140572,35.1562459,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>9.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴５００－８<br>緯度: 35.1559721<br>経度: 139.1387062]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴５００－８</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1559721</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1387062</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1387062,35.1559721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１７７９－５<br>緯度: 35.1552122<br>経度: 139.13568]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１７７９－５</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1552122</value>
+          </Data>
+          <Data name="経度">
+            <value>139.13568</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.13568,35.1552122,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴４２８－１<br>緯度: 35.1556037<br>経度: 139.1357497]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴４２８－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1556037</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1357497</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1357497,35.1556037,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>12.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１８１６－９<br>緯度: 35.156395<br>経度: 139.1324043]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１８１６－９</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.156395</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1324043</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1324043,35.156395,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>13.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴３７２－２<br>緯度: 35.15677164465765<br>経度: 139.13340063928962]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴３７２－２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.15677164465765</value>
+          </Data>
+          <Data name="経度">
+            <value>139.13340063928962</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.13340063929,35.1567716446577,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>14.0</name>
+        <description><![CDATA[投票区: 第二投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴４３３－１<br>緯度: 35.156261<br><br>経度: 139.135879]]></description>
+        <styleUrl>#icon-1574-558B2F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第二投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴４３３－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.156261
+</value>
+          </Data>
+          <Data name="経度">
+            <value>139.135879</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.135879,35.156261,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>15.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴３４５－１<br>緯度: 35.1572182<br>経度: 139.1353025]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴３４５－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1572182</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1353025</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1353025,35.1572182,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>17.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩２４８－１<br>緯度: 35.1577522<br>経度: 139.1375595]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩２４８－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1577522</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1375595</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1375595,35.1577522,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴２９８－１<br>緯度: 35.1574759<br>経度: 139.1386321]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴２９８－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1574759</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1386321</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1386321,35.1574759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>19.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩１８１－２<br>緯度: 35.1588687<br>経度: 139.1379615]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩１８１－２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1588687</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1379615</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1379615,35.1588687,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>20.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩１２８－１<br>緯度: 35.158294<br>経度: 139.1396109]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩１２８－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.158294</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1396109</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1396109,35.158294,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>21.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩１１１－１<br>緯度: 35.1594681<br>経度: 139.1409897]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩１１１－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1594681</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1409897</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1409897,35.1594681,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>22.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩４５５－１７<br>緯度: 35.1608638<br>経度: 139.1402273]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩４５５－１７</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1608638</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1402273</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1402273,35.1608638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>23.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩５０３<br>緯度: 35.161412<br>経度: 139.1384071]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩５０３</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.161412</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1384071</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1384071,35.161412,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>24.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩５８２<br>緯度: 35.16230864897205<br>経度: 139.13827284893966]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩５８２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.16230864897205</value>
+          </Data>
+          <Data name="経度">
+            <value>139.13827284893966</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.13827284894,35.1623086489721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>25.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩７１２ー２<br>緯度: 35.1638797<br>経度: 139.1386627]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩７１２ー２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1638797</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1386627</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1386627,35.1638797,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>26.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩９２４－２<br>緯度: 35.167090648809236<br>経度: 139.13989222868722]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩９２４－２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.167090648809236</value>
+          </Data>
+          <Data name="経度">
+            <value>139.13989222868722</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.139892228687,35.1670906488092,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>27.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩８６４<br>緯度: 35.1680515<br>経度: 139.1381587]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩８６４</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1680515</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1381587</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1381587,35.1680515,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>28.0</name>
+        <description><![CDATA[投票区: 第四投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩８５３－２<br>緯度: 35.1725638<br>経度: 139.1317465]]></description>
+        <styleUrl>#icon-1574-AFB42B-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第四投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩８５３－２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1725638</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1317465</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1317465,35.1725638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>29.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩６８３－３<br>緯度: 35.165945<br>経度: 139.1351975]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩６８３－３</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.165945</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1351975</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1351975,35.165945,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>30.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩３７６－３<br>緯度: 35.1616752<br>経度: 139.1352833]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩３７６－３</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1616752</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1352833</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1352833,35.1616752,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>31.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１８９３－６<br>緯度: 35.1589007<br>経度: 139.1330397]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１８９３－６</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1589007</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1330397</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1330397,35.1589007,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>32.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 岩３２７－１<br>緯度: 35.1604634<br>経度: 139.1318079]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>岩３２７－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1604634</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1318079</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1318079,35.1604634,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>33.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１８５３－３<br>緯度: 35.1567588<br>経度: 139.1316828]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１８５３－３</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1567588</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1316828</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1316828,35.1567588,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>34.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１９４６－６２<br>緯度: 35.1591901<br>経度: 139.1295166]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１９４６－６２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.1591901</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1295166</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.1295166,35.1591901,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>35.0</name>
+        <description><![CDATA[投票区: 第五投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴１８７２－１<br>緯度: 35.15791573526686<br>経度: 139.1327702004082]]></description>
+        <styleUrl>#icon-1574-817717-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第五投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴１８７２－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.15791573526686</value>
+          </Data>
+          <Data name="経度">
+            <value>139.1327702004082</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.132770200408,35.1579157352669,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>6.0</name>
+        <description><![CDATA[投票区: 第一投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴５０－１<br>緯度: 35.154856<br><br>経度: 139.142843]]></description>
+        <styleUrl>#icon-1574-F9A825-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第一投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴５０－１</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.154856
+</value>
+          </Data>
+          <Data name="経度">
+            <value>139.142843</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.142843,35.154856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>16.0</name>
+        <description><![CDATA[投票区: 第三投票区<br>住所1: 神奈川県足柄下郡真鶴町<br>住所2: 真鶴３３５－２<br>緯度: 35.157713<br><br>経度: 139.134899]]></description>
+        <styleUrl>#icon-1574-880E4F-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="投票区">
+            <value>第三投票区</value>
+          </Data>
+          <Data name="住所1">
+            <value>神奈川県足柄下郡真鶴町</value>
+          </Data>
+          <Data name="住所2">
+            <value>真鶴３３５－２</value>
+          </Data>
+          <Data name="緯度">
+            <value>35.157713
+</value>
+          </Data>
+          <Data name="経度">
+            <value>139.134899</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            139.134899,35.157713,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
