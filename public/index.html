@@ -127,12 +127,21 @@
                     });
 
                     var marker = L.marker([item.Latitude, item.Longitude], { icon: icon, status: item["ステータス"] });
-                    marker.bindPopup(`<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>ステータス: ${item["ステータス"]}`);
+                    
+                    var popupContent = `<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>ステータス: ${item["ステータス"]}`;
+                    popupContent += `<br><button onclick="openGoogleMaps(${item.Latitude}, ${item.Longitude})">Open in Google Maps</button>`;
+                    marker.bindPopup(popupContent);
+                    
                     allMarkers.push(marker);
                 });
 
                 updateMarkers();
             });
+
+        function openGoogleMaps(lat, lng) {
+            var url = `https://www.google.com/maps/search/${lat},${lng}`;
+            window.open(url, '_blank');
+        }
 
         document.querySelectorAll('.status-checkbox').forEach(function(checkbox) {
             checkbox.addEventListener('change', updateMarkers);
