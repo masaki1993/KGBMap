@@ -28,9 +28,16 @@
             .then(data => {
                 data.forEach(function(item) {
                     var marker = L.marker([item.Latitude, item.Longitude]).addTo(map);
-                    marker.bindPopup(`<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>Status: ${item.status}`);
+                    var popupContent = `<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>Status: ${item.status}`;
+                    popupContent += `<br><button onclick="openGoogleMaps(${item.Latitude}, ${item.Longitude})">Open in Google Maps</button>`;
+                    marker.bindPopup(popupContent);
                 });
             });
+
+        function openGoogleMaps(lat, lng) {
+            var url = `https://www.google.com/maps/search/${lat},${lng}`;
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 </html>
