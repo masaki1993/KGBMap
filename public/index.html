@@ -6,59 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        #map {
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-        }
-        .custom-marker-red {
-            background-color: red;
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 2px solid #FFFFFF;
-        }
-        .custom-marker-yellow {
-            background-color: yellow;
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 2px solid #FFFFFF;
-        }
+    #map {
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+    }
+    .custom-marker-red {
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid #FFFFFF;
+    }
+    .custom-marker-yellow {
+        background-color: yellow;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid #FFFFFF;
+    }
+    #status-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    #completion-rate, #remaining {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #completion-rate span, #remaining span {
+        font-size: 20px;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
+    <div id="status-container">
+        <div id="completion-rate">
+            完了率 (全域)<br>
+            <span id="completion-percentage">100.00%</span>
+        </div>
+        <div id="remaining">
+            残り<br>
+            <span id="remaining-places">0ヶ所</span>
+        </div>
+    </div>
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // Set the initial view to the coordinates of 神奈川県足柄下郡真鶴町
         var map = L.map('map').setView([35.1525, 139.1343], 14);
-
+    
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-
+    
         fetch('poster_data.json')
             .then(response => response.json())
             .then(data => {
+                var totalPlaces = data.length;
+                var completedPlaces = data.filter(item => item["ステータス"] === '完了').length;
+                var remainingPlaces = totalPlaces - completedPlaces;
+                var completionPercentage = ((completedPlaces / totalPlaces) * 100).toFixed(2);
+    
+                document.getElementById('completion-percentage').innerText = completionPercentage + '%';
+                document.getElementById('remaining-places').innerText = remainingPlaces + 'ヶ所';
+    
                 data.forEach(function(item) {
-                    var markerColor = item.status ? 'custom-marker-yellow' : 'custom-marker-red';
-
+                    var markerColor = item["ステータス"] === '完了' ? 'custom-marker-yellow' : 'custom-marker-red';
+    
                     var icon = L.divIcon({
                         className: markerColor,
                         iconSize: [20, 20],
                         iconAnchor: [10, 10]
                     });
-
+    
                     var marker = L.marker([item.Latitude, item.Longitude], { icon: icon }).addTo(map);
-
-                    var popupContent = `<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>Status: ${item.status ? '完了' : '未完了'}`;
+    
+                    var popupContent = `<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>ステータス: ${item["ステータス"]}`;
                     popupContent += `<br><button onclick="openGoogleMaps(${item.Latitude}, ${item.Longitude})">Open in Google Maps</button>`;
                     marker.bindPopup(popupContent);
                 });
             });
-
+    
         function openGoogleMaps(lat, lng) {
             var url = `https://www.google.com/maps/search/${lat},${lng}`;
             window.open(url, '_blank');
