@@ -106,7 +106,7 @@
             });
         }
 
-        fetch('poster_data.json')
+        fetch('poster_data.json?_=' + new Date().getTime())
             .then(response => response.json())
             .then(data => {
                 var totalPlaces = data.length;
