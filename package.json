@@ -1,0 +1,23 @@
+{
+  "name": "keijibanmap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masaki1993/KGBMap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/masaki1993/KGBMap/issues"
+  },
+  "homepage": "https://github.com/masaki1993/KGBMap#readme",
+  "description": ""
+}
