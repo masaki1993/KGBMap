@@ -2,7 +2,7 @@ name: Update Data
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,10 +16,10 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install requests
+        python3 -m pip install --upgrade pip
+        pip3 install requests
     - name: Run update script
-      run: python readsheet.py
+      run: python3 readsheet.py
     - name: Commit and push if changed
       run: |
         git config --global user.email "github-actions@example.com"
