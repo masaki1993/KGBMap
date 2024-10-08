@@ -1,20 +1,26 @@
 import requests
 import json
 import sys
+from datetime import datetime
+
+# Add this at the beginning of the script
+def log_message(message):
+    with open('readsheet_log.txt', 'a') as log_file:
+        log_file.write(f"{datetime.now()}: {message}\n")
 
 # Updated Google Apps Script Web application URL for version 2
 GAS_URL = "https://script.google.com/macros/s/AKfycbxiq0DkAeoJWxctvpSE-2EC9wZDOPn8voUnZ87bwYcsxgGOJSqic1sLoTPqz7Q0PU1edA/exec"
 
-print("Starting data fetch from Google Apps Script...")
+log_message("Starting data fetch from Google Apps Script...")
 
 try:
     # データを取得
     response = requests.get(GAS_URL)
     response.raise_for_status()  # This will raise an exception for HTTP errors
     data = response.json()
-    print(f"Data fetched successfully. Number of items: {len(data)}")
+    log_message(f"Data fetched successfully. Number of items: {len(data)}")
 except requests.exceptions.RequestException as e:
-    print(f"Error fetching data: {e}", file=sys.stderr)
+    log_message(f"Error fetching data: {e}")
     sys.exit(1)
 
 # データの検証と整形
@@ -32,7 +38,7 @@ for item in data:
     }
     formatted_data.append(formatted_item)
 
-print(f"Data formatted. Number of formatted items: {len(formatted_data)}")
+log_message(f"Data formatted. Number of formatted items: {len(formatted_data)}")
 
 # JSON形式に変換（整形）
 json_data = json.dumps(formatted_data, ensure_ascii=False, indent=2)
@@ -41,9 +47,9 @@ json_data = json.dumps(formatted_data, ensure_ascii=False, indent=2)
 try:
     with open('public/poster_data.json', 'w', encoding='utf-8') as f:
         f.write(json_data)
-    print("Data has been successfully written to poster_data.json")
+    log_message("Data has been successfully written to poster_data.json")
 except IOError as e:
-    print(f"Error writing to file: {e}", file=sys.stderr)
+    log_message(f"Error writing to file: {e}")
     sys.exit(1)
 
-print(f"Data update process completed. Total items: {len(formatted_data)}")
+log_message(f"Data update process completed. Total items: {len(formatted_data)}")
