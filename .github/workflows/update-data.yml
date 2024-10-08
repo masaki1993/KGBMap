@@ -7,18 +7,16 @@ on:
   repository_dispatch:  # Google Apps Scriptからのトリガー用
     types: [update-data]
 
-# 最終更新: 2023-05-XX
-
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
     
@@ -28,28 +26,21 @@ jobs:
         pip install requests
     
     - name: Update data
-      run: |
-        python readsheet.py
-        if [ $? -ne 0 ]; then
-          echo "Error occurred while running readsheet.py"
-          exit 1
-        fi
+      run: python readsheet.py
     
-    - name: Check if poster_data.json was updated
+    - name: Commit and push if changed
       run: |
-        if git diff --exit-code public/poster_data.json; then
-          echo "No changes in poster_data.json"
-        else
-          echo "poster_data.json was updated"
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add public/poster_data.json
-          git commit -m "Update data"
-          git push
-        fi
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add public/poster_data.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update data" && git push)
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+      run: |
+        git checkout --orphan gh-pages
+        git rm -rf .
+        mv public/* .
+        rm -rf public
+        git add .
+        git commit -m "Deploy to GitHub Pages"
+        git push -f origin gh-pages
