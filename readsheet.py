@@ -1,8 +1,8 @@
 import requests
 import json
 
-# 更新された Google Apps Script Web アプリケーションの URL
-GAS_URL = "https://script.google.com/macros/s/AKfycbxiq0DkAeoJWxctvpSE-2EC9wZDOPn8voUnZ87bwYcsxgGOJSqic1sLoTPqz7Q0PU1edA/exec"
+# Updated Google Apps Script Web application URL
+GAS_URL = "https://script.google.com/macros/s/AKfycbzM25TfIKZBLjFceKVzuNnJ3ONTDsjvDmaqP8JsCY7sSZVLujoSffQ0U_oNiHuSfXqo/exec"
 
 # データを取得
 response = requests.get(GAS_URL)
