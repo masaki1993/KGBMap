@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poster Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+        .custom-marker-red {
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+        }
+        .custom-marker-yellow {
+            background-color: yellow;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+        }
+        #status-container {
+            position: absolute;
+            top: 90px;
+            left: 10px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+        #completion-rate, #remaining {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        #completion-rate span, #remaining span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #checkbox-container {
+            position: absolute;
+            top: 100px;
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="status-container">
+        <div id="completion-rate">
+            完了率 (全域)<br>
+            <span id="completion-percentage">100.00%</span>
+        </div>
+        <div id="remaining">
+            残り<br>
+            <span id="remaining-places">0ヶ所</span>
+        </div>
+    </div>
+    <div id="checkbox-container">
+        <label><input type="checkbox" class="status-checkbox" value="未完了" checked> 未完了</label><br>
+        <label><input type="checkbox" class="status-checkbox" value="完了" checked> 完了</label><br>
+        <label><input type="checkbox" class="status-checkbox" value="異常" checked> 異常</label><br>
+        <label><input type="checkbox" class="status-checkbox" value="要確認" checked> 要確認</label><br>
+        <label><input type="checkbox" class="status-checkbox" value="異常対応中" checked> 異常対応中</label><br>
+        <label><input type="checkbox" class="status-checkbox" value="削除" checked> 削除</label><br>
+        <label><input type="checkbox" class="status-checkbox" value="期日前投票所" checked> 期日前投票所</label><br>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Set the initial view to the coordinates of 神奈川県足柄下郡真鶴町
+        var map = L.map('map').setView([35.1525, 139.1343], 14);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var allMarkers = [];
+
+        function updateMarkers() {
+            var checkboxes = document.querySelectorAll('.status-checkbox');
+            var checkedStatuses = [];
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    checkedStatuses.push(checkbox.value);
+                }
+            });
+
+            allMarkers.forEach(function(marker) {
+                if (checkedStatuses.includes(marker.options.status)) {
+                    marker.addTo(map);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+        }
+
+        fetch('poster_data.json')
+            .then(response => response.json())
+            .then(data => {
+                var totalPlaces = data.length;
+                var completedPlaces = data.filter(item => item["ステータス"] === '完了').length;
+                var remainingPlaces = totalPlaces - completedPlaces;
+                var completionPercentage = ((completedPlaces / totalPlaces) * 100).toFixed(2);
+
+                document.getElementById('completion-percentage').innerText = completionPercentage + '%';
+                document.getElementById('remaining-places').innerText = remainingPlaces + 'ヶ所';
+
+                data.forEach(function(item) {
+                    var markerColor = item["ステータス"] === '完了' ? 'custom-marker-yellow' : 'custom-marker-red';
+
+                    var icon = L.divIcon({
+                        className: markerColor,
+                        iconSize: [20, 20],
+                        iconAnchor: [10, 10]
+                    });
+
+                    var marker = L.marker([item.Latitude, item.Longitude], { icon: icon, status: item["ステータス"] });
+                    
+                    var popupContent = `<b>${item.Name}</b><br>投票区: ${item["投票区"]}<br>住所1: ${item["住所1"]}<br>住所2: ${item["住所2"]}<br>ステータス: ${item["ステータス"]}`;
+                    popupContent += `<br><button onclick="openGoogleMaps(${item.Latitude}, ${item.Longitude})">Open in Google Maps</button>`;
+                    marker.bindPopup(popupContent);
+                    
+                    allMarkers.push(marker);
+                });
+
+                updateMarkers();
+            });
+
+        function openGoogleMaps(lat, lng) {
+            var url = `https://www.google.com/maps/search/${lat},${lng}`;
+            window.open(url, '_blank');
+        }
+
+        document.querySelectorAll('.status-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', updateMarkers);
+        });
+    </script>
+</body>
+</html>
