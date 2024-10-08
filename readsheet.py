@@ -1,34 +1,33 @@
 import requests
 import json
-import pandas as pd
 
-# Google Apps ScriptのURLを設定
-url = 'https://script.google.com/macros/s/AKfycbw38DeRxTrQAHnOoU3do7931AGSpBHIxOgP_LDatjOlm0trFCzYjG9vFwhLvWH5Wx5mOQ/exec'
-response = requests.get(url)
+# 更新された Google Apps Script Web アプリケーションの URL
+GAS_URL = "https://script.google.com/macros/s/AKfycbxiq0DkAeoJWxctvpSE-2EC9wZDOPn8voUnZ87bwYcsxgGOJSqic1sLoTPqz7Q0PU1edA/exec"
 
-# レスポンスの内容を確認
-print(f"HTTPステータスコード: {response.status_code}")
+# データを取得
+response = requests.get(GAS_URL)
+data = response.json()
 
-if response.status_code == 200:
-    print(f"レスポンステキスト: {response.text}")
-    try:
-        data = response.json()
-    except json.JSONDecodeError as e:
-        print(f"JSONのデコードに失敗しました: {e}")
-        data = None
+# データの検証と整形
+formatted_data = []
+for item in data:
+    formatted_item = {
+        "Name": item.get("Name", ""),
+        "Latitude": item.get("Latitude", 0),
+        "Longitude": item.get("Longitude", 0),
+        "投票区": item.get("投票区", ""),
+        "住所1": item.get("住所1", ""),
+        "住所2": item.get("住所2", ""),
+        "ステータス": item.get("ステータス", "未完了"),
+        "更新者": item.get("更新者", "")
+    }
+    formatted_data.append(formatted_item)
 
-    if data:
-        # データフレームに変換
-        df = pd.DataFrame(data)
+# JSON形式に変換（整形）
+json_data = json.dumps(formatted_data, ensure_ascii=False, indent=2)
 
-        # JSONファイルとして保存
-        df.to_json('poster_data.json', orient='records')
+# JSONファイルに保存
+with open('public/poster_data.json', 'w', encoding='utf-8') as f:
+    f.write(json_data)
 
-        print("データをJSONファイルに保存しました。")
-
-        # データフレームを表示
-        print(df)
-    else:
-        print("データが空です。")
-else:
-    print("データを取得できませんでした。")
+print(f"Data has been updated and saved to poster_data.json. Total items: {len(formatted_data)}")

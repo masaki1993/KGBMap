@@ -1,1 +1,41 @@
- 
+name: Update Data and Deploy
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 毎日午前0時に実行
+  workflow_dispatch:  # 手動実行用
+  repository_dispatch:  # Google Apps Scriptからのトリガー用
+    types: [update-data]
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    
+    - name: Update data
+      run: python readsheet.py
+    
+    - name: Commit and push if changed
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add public/poster_data.json
+        git commit -m "Update data" || exit 0
+        git push
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
