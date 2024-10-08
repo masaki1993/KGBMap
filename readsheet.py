@@ -1,12 +1,21 @@
 import requests
 import json
+import sys
 
-# Updated Google Apps Script Web application URL
-GAS_URL = "https://script.google.com/macros/s/AKfycbzM25TfIKZBLjFceKVzuNnJ3ONTDsjvDmaqP8JsCY7sSZVLujoSffQ0U_oNiHuSfXqo/exec"
+# Updated Google Apps Script Web application URL for version 2
+GAS_URL = "https://script.google.com/macros/s/AKfycbxiq0DkAeoJWxctvpSE-2EC9wZDOPn8voUnZ87bwYcsxgGOJSqic1sLoTPqz7Q0PU1edA/exec"
 
-# データを取得
-response = requests.get(GAS_URL)
-data = response.json()
+print("Starting data fetch from Google Apps Script...")
+
+try:
+    # データを取得
+    response = requests.get(GAS_URL)
+    response.raise_for_status()  # This will raise an exception for HTTP errors
+    data = response.json()
+    print(f"Data fetched successfully. Number of items: {len(data)}")
+except requests.exceptions.RequestException as e:
+    print(f"Error fetching data: {e}", file=sys.stderr)
+    sys.exit(1)
 
 # データの検証と整形
 formatted_data = []
@@ -23,11 +32,18 @@ for item in data:
     }
     formatted_data.append(formatted_item)
 
+print(f"Data formatted. Number of formatted items: {len(formatted_data)}")
+
 # JSON形式に変換（整形）
 json_data = json.dumps(formatted_data, ensure_ascii=False, indent=2)
 
 # JSONファイルに保存
-with open('public/poster_data.json', 'w', encoding='utf-8') as f:
-    f.write(json_data)
+try:
+    with open('public/poster_data.json', 'w', encoding='utf-8') as f:
+        f.write(json_data)
+    print("Data has been successfully written to poster_data.json")
+except IOError as e:
+    print(f"Error writing to file: {e}", file=sys.stderr)
+    sys.exit(1)
 
-print(f"Data has been updated and saved to poster_data.json. Total items: {len(formatted_data)}")
+print(f"Data update process completed. Total items: {len(formatted_data)}")
